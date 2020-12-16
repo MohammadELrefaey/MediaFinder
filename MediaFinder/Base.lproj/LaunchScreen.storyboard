@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mediafinder-logo" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-UW-Rih">
+                                <rect key="frame" x="62" y="325.5" width="290" height="245"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5S-cV-8j2">
+                                <rect key="frame" x="163.5" y="825" width="87" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REFA3Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgo-lq-aEY">
+                                <rect key="frame" x="145" y="854.5" width="124" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bAg-UW-Rih" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6xb-0y-kjL"/>
+                            <constraint firstItem="e5S-cV-8j2" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.03" id="Kjd-EP-Bqk"/>
+                            <constraint firstItem="Zgo-lq-aEY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MUX-O8-bUa"/>
+                            <constraint firstItem="e5S-cV-8j2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MbU-6N-dSC"/>
+                            <constraint firstItem="bAg-UW-Rih" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="OwT-WU-xSu"/>
+                            <constraint firstAttribute="bottom" secondItem="Zgo-lq-aEY" secondAttribute="bottom" constant="10" id="Zpl-Y0-oa3"/>
+                            <constraint firstItem="bAg-UW-Rih" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gzg-vs-if7"/>
+                            <constraint firstItem="bAg-UW-Rih" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="oPD-HZ-gDm"/>
+                            <constraint firstItem="Zgo-lq-aEY" firstAttribute="top" secondItem="e5S-cV-8j2" secondAttribute="bottom" constant="5" id="oug-qo-nsE"/>
+                            <constraint firstItem="Zgo-lq-aEY" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.3" id="pW8-eV-3JN"/>
+                            <constraint firstItem="e5S-cV-8j2" firstAttribute="width" secondItem="Zgo-lq-aEY" secondAttribute="width" multiplier="0.7" id="xSh-k2-lP0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mediafinder-logo" width="337" height="129"/>
+    </resources>
+</document>
