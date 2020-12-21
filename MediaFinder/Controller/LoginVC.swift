@@ -57,10 +57,10 @@ class LoginVC: UIViewController {
     }
     
     
-    func goToProfileVc() {
+    func goToMediaListVC() {
     let sb = UIStoryboard(name: "Main", bundle: nil)
-    let profileVC = sb.instantiateViewController(identifier: "profileVC") as! ProfileVC
-    self.navigationController?.pushViewController(profileVC, animated: true)
+    let mediaListVC = sb.instantiateViewController(identifier: "mediaListVC") as! MediaListVC
+    self.navigationController?.pushViewController(mediaListVC, animated: true)
     }
     
     @IBAction func signUpBtnTapped(_ sender: UIButton) {
@@ -74,7 +74,7 @@ class LoginVC: UIViewController {
     @IBAction func signInBtnTapped(_ sender: UIButton) {
         if isDataEntered() {
         if isValid() {
-            goToProfileVc()
+            goToMediaListVC()
         }
         else {
           showAlert(message: "Insert Correct Email and Password")

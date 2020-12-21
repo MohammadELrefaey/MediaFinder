@@ -20,4 +20,5 @@ public struct User: Codable {
     var address: String!
     var phone: String!
     var gender: String!
+    var mediaArray: [Media]!
 }

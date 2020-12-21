@@ -19,23 +19,14 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // hide navigation bar
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
 
         self.user = getUserDefaults()
         printData()
         UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
     }
     
-        func getUserDefaults() -> User? {
-            if let savedUser = UserDefaults.standard.object(forKey: "User") as? Data {
-                let decoder = JSONDecoder()
-                if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
-                    return loadedUser
-                }
-            }
-            return nil
-        }
-
+       
     
     func printData() {
         nameLable.text = " " + self.user.name

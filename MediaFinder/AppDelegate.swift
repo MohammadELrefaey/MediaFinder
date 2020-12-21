@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         if userData != nil {
             if loggedIn {
-            let rootVC = sb.instantiateViewController(identifier: "profileVC") as! ProfileVC
+            let rootVC = sb.instantiateViewController(identifier: "mediaListVC") as! MediaListVC
             let navigationController = UINavigationController(rootViewController: rootVC)
             window?.rootViewController = navigationController
             }
@@ -29,11 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.rootViewController = navigationController
             }
         }
-//        else {
-//        let rootVC = sb.instantiateViewController(identifier: "login") as! RegisterationVC
-//        let navigationController = UINavigationController(rootViewController: rootVC)
-//        window?.rootViewController = navigationController
-//        }
     }
     
     

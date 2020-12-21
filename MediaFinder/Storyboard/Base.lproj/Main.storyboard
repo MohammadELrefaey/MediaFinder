@@ -10,7 +10,7 @@
         <!--RegisterationVC-->
         <scene sceneID="Qor-Yv-W2a">
             <objects>
-                <viewController storyboardIdentifier="registerationVC" id="XJA-Xs-OMB" customClass="RegisterationVC" customModule="session22Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerationVC" id="XJA-Xs-OMB" customClass="RegisterationVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJ0-oE-19U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,27 +30,27 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-34-jl7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="658"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piZ-DF-mZh" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piZ-DF-mZh" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                                 <rect key="frame" x="83.5" y="5" width="325.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49E-kb-gxA" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49E-kb-gxA" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                                 <rect key="frame" x="118" y="89.5" width="291" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cr8-Ye-0Qp" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cr8-Ye-0Qp" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                                 <rect key="frame" x="84" y="174" width="325" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-QJ-Gs7" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-QJ-Gs7" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                                 <rect key="frame" x="87" y="258.5" width="322" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzL-Zx-vDZ" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RzL-Zx-vDZ" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="343" width="304" height="34.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -226,7 +226,7 @@
         <!--MapVC-->
         <scene sceneID="Gdw-2F-keH">
             <objects>
-                <viewController storyboardIdentifier="MapVC" id="p87-YP-LjP" customClass="MapVC" customModule="session22Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" id="p87-YP-LjP" customClass="MapVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsl-vR-qNv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
         <!--LoginVC-->
         <scene sceneID="oEf-NO-ss4">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="xZF-VV-54H" customClass="LoginVC" customModule="session22Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="xZF-VV-54H" customClass="LoginVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tlf-dF-t4G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,12 +304,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-hY-mI4" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaa-hY-mI4" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="123" y="329" width="271" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcB-DZ-zul" customClass="CustomTextField" customModule="session22Task" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcB-DZ-zul" customClass="CustomTextField" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="83" y="233.5" width="311" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -393,15 +393,111 @@
             </objects>
             <point key="canvasLocation" x="805.60000000000002" y="603.14842578710648"/>
         </scene>
+        <!--Media ListVC-->
+        <scene sceneID="n9O-Qz-nEQ">
+            <objects>
+                <viewController storyboardIdentifier="mediaListVC" id="lUc-Kw-U9Q" customClass="MediaListVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGB-Fq-7jR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mediafinder-logo" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-yt-pNZ">
+                                <rect key="frame" x="103.5" y="44" width="207" height="82"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wM-mo-8B0">
+                                <rect key="frame" x="124" y="131" width="166" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uVh-tt-OTu">
+                                <rect key="frame" x="0.0" y="162.5" width="414" height="699.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="233" id="Qhc-t9-Qbg" customClass="MediaTableViewCell" customModule="MediaFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="233"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qhc-t9-Qbg" id="idJ-9O-OQp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-8z-ZAM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7x-G5-ERi">
+                                                    <rect key="frame" x="175.5" y="99.5" width="63.5" height="34.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i7x-G5-ERi" firstAttribute="centerX" secondItem="idJ-9O-OQp" secondAttribute="centerX" id="8JE-G0-wzF"/>
+                                                <constraint firstItem="i7x-G5-ERi" firstAttribute="centerY" secondItem="idJ-9O-OQp" secondAttribute="centerY" id="NQ1-vn-zw7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="5bU-8z-ZAM" firstAttribute="leading" secondItem="Qhc-t9-Qbg" secondAttribute="leading" id="It2-GE-zYa"/>
+                                            <constraint firstItem="5bU-8z-ZAM" firstAttribute="top" secondItem="Qhc-t9-Qbg" secondAttribute="top" id="L2a-l7-2wC"/>
+                                            <constraint firstAttribute="trailing" secondItem="5bU-8z-ZAM" secondAttribute="trailing" id="boh-rQ-Mzd"/>
+                                            <constraint firstAttribute="bottom" secondItem="5bU-8z-ZAM" secondAttribute="bottom" id="wtN-D9-Gl0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mediaImageView" destination="5bU-8z-ZAM" id="XDz-12-Y7Q"/>
+                                            <outlet property="mediaNameLabel" destination="i7x-G5-ERi" id="Hl1-xC-WTA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-62-VNJ">
+                                <rect key="frame" x="20" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1u5-RU-v6u"/>
+                                    <constraint firstAttribute="height" constant="40" id="emb-Kd-QfA"/>
+                                </constraints>
+                                <state key="normal" image="person.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="ProfileBtnTapped:" destination="lUc-Kw-U9Q" eventType="touchUpInside" id="Za7-BT-EhO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WGF-yt-pNZ" firstAttribute="centerX" secondItem="4Qe-9W-UMV" secondAttribute="centerX" id="0TM-xu-g1v"/>
+                            <constraint firstItem="9wM-mo-8B0" firstAttribute="centerX" secondItem="4Qe-9W-UMV" secondAttribute="centerX" id="7uE-TH-l12"/>
+                            <constraint firstItem="uVh-tt-OTu" firstAttribute="bottom" secondItem="4Qe-9W-UMV" secondAttribute="bottom" id="RQw-BL-mSl"/>
+                            <constraint firstItem="WGF-yt-pNZ" firstAttribute="top" secondItem="4Qe-9W-UMV" secondAttribute="top" id="ahd-xD-WX0"/>
+                            <constraint firstItem="WGF-yt-pNZ" firstAttribute="height" secondItem="4Qe-9W-UMV" secondAttribute="height" multiplier="0.1" id="cXh-Rk-Xtw"/>
+                            <constraint firstItem="uVh-tt-OTu" firstAttribute="leading" secondItem="4Qe-9W-UMV" secondAttribute="leading" id="exZ-i3-Q9e"/>
+                            <constraint firstItem="9wM-mo-8B0" firstAttribute="width" secondItem="4Qe-9W-UMV" secondAttribute="width" multiplier="0.4" id="h8g-11-HA1"/>
+                            <constraint firstItem="4Qe-9W-UMV" firstAttribute="trailing" secondItem="uVh-tt-OTu" secondAttribute="trailing" id="iEa-6v-Afs"/>
+                            <constraint firstItem="9wM-mo-8B0" firstAttribute="top" secondItem="WGF-yt-pNZ" secondAttribute="bottom" constant="5" id="oPl-3d-VZ0"/>
+                            <constraint firstItem="uVh-tt-OTu" firstAttribute="top" secondItem="9wM-mo-8B0" secondAttribute="bottom" id="v90-yI-TyV"/>
+                            <constraint firstItem="WGF-yt-pNZ" firstAttribute="width" secondItem="4Qe-9W-UMV" secondAttribute="width" multiplier="0.5" id="vDe-7Y-Sfj"/>
+                            <constraint firstItem="JLF-62-VNJ" firstAttribute="top" secondItem="4Qe-9W-UMV" secondAttribute="top" constant="20" id="wb8-p1-4eB"/>
+                            <constraint firstItem="JLF-62-VNJ" firstAttribute="leading" secondItem="4Qe-9W-UMV" secondAttribute="leading" constant="20" id="xlJ-SN-NqJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Qe-9W-UMV"/>
+                    </view>
+                    <connections>
+                        <outlet property="mediaTable" destination="uVh-tt-OTu" id="DJ3-oc-Mnn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksz-Oc-Rlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828.985507246377" y="128.57142857142856"/>
+        </scene>
         <!--ProfileVC-->
         <scene sceneID="MDE-E6-KBz">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="ptQ-wp-aqt" customClass="ProfileVC" customModule="session22Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="ptQ-wp-aqt" customClass="ProfileVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MdP-5y-hqU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-4f-vyg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-4f-vyg">
                                 <rect key="frame" x="10" y="235" width="77" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cS1-4f-vyg" secondAttribute="height" multiplier="69:31" id="UCs-Ad-7Xd"/>
@@ -437,19 +533,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-AL-ezO" customClass="LabelBorder" customModule="session22Task" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-AL-ezO" customClass="LabelBorder" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="92" y="284.5" width="312" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-Kk-y5o" customClass="LabelBorder" customModule="session22Task" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-Kk-y5o" customClass="LabelBorder" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="110" y="339.5" width="294" height="35"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKs-FK-aee" customClass="LabelBorder" customModule="session22Task" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKs-FK-aee" customClass="LabelBorder" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="105" y="389.5" width="299" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -476,7 +572,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mediafinder-logo" translatesAutoresizingMaskIntoConstraints="NO" id="jgG-Qx-IMD" customClass="ide">
                                 <rect key="frame" x="103.5" y="54" width="207" height="82"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ble-ab-bXI" customClass="LabelBorder" customModule="session22Task" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ble-ab-bXI" customClass="LabelBorder" customModule="MediaFinder" customModuleProvider="target">
                                 <rect key="frame" x="97" y="235" width="307" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -556,5 +652,6 @@
     <resources>
         <image name="Pin" width="16" height="46"/>
         <image name="mediafinder-logo" width="337" height="129"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

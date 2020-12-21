@@ -45,13 +45,7 @@ class RegisterationVC: UIViewController {
             return false
     }
     
-    func setUserDefaults(user: User){
-                   let encoder = JSONEncoder()
-                   if let encoded = try? encoder.encode(user) {
-                       UserDefaults.standard.set(encoded, forKey: "User")
-                   }
-               }
-    
+   
     // Validations
     func validateEmail() -> Bool {
         if  emailTxtField.text!.isValidEmail(Input: emailTxtField.text!) {
