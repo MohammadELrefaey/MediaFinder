@@ -19,20 +19,33 @@ class MediaListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        self.user = getUserDefaults()
-        
-        //unwraping media array
-        if let unWrappedMediaArray = self.user.mediaArray {
-            mediaArray = unWrappedMediaArray
-            print(mediaArray)
-        }
+        bindMedia()
+//        self.user = getUserDefaults()
+//
+//        //unwraping media array
+//        if let unWrappedMediaArray = self.user.mediaArray {
+//            mediaArray = unWrappedMediaArray
+//            print(mediaArray)
+//        }
         
         //set table view delegates
         mediaTable.dataSource = self
         mediaTable.delegate = self
     }
-    
+
+    func bindMedia() {
+       let media1 = Media(image: "SherlockHolmesImg", name: "Sherlock Holmes")
+       let media2 = Media(image: "TheDarkKnightImg", name: "The Dark Knight")
+       let media3 = Media(image: "TheDarkKnightRisesImg", name: "The Dark Knight Rises")
+       let media4 = Media(image: "InceptionImg", name: "Inception")
+       let media5 = Media(image: "InterstellarImg", name: "Interstellar")
+       mediaArray = [media1,media2,media3,media4,media5]
+        
+        
+//        user.mediaArray = mediaArray
+//        setUserDefaults(user: user)
+      
+    }
     
 
     
@@ -68,5 +81,4 @@ extension MediaListVC: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 235
     }
-    
 }
