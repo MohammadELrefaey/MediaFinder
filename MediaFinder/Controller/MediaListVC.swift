@@ -10,7 +10,7 @@ import UIKit
 
 class MediaListVC: UIViewController {
 
-    let reusabelIdentifeier: String = "MediaTableViewCell"
+    let reusabelIdentifier: String = "MediaCellView"
     var mediaArray: [Media] = [Media]()
     var user: User!
 
@@ -19,41 +19,40 @@ class MediaListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Register Cell
+        mediaTable.register(UINib(nibName: "MediaCellView", bundle: nil), forCellReuseIdentifier: reusabelIdentifier)
+        
+        // call Bind media unction
         bindMedia()
-//        self.user = getUserDefaults()
-//
-//        //unwraping media array
-//        if let unWrappedMediaArray = self.user.mediaArray {
-//            mediaArray = unWrappedMediaArray
-//            print(mediaArray)
-//        }
+        
+        // store to UserDefaults
+        self.user = UserDefaulsManager.shared().get()
         
         //set table view delegates
         mediaTable.dataSource = self
         mediaTable.delegate = self
     }
-
-    func bindMedia() {
-       let media1 = Media(image: "SherlockHolmesImg", name: "Sherlock Holmes")
-       let media2 = Media(image: "TheDarkKnightImg", name: "The Dark Knight")
-       let media3 = Media(image: "TheDarkKnightRisesImg", name: "The Dark Knight Rises")
-       let media4 = Media(image: "InceptionImg", name: "Inception")
-       let media5 = Media(image: "InterstellarImg", name: "Interstellar")
-       mediaArray = [media1,media2,media3,media4,media5]
+    
+    
+    // get media from API
+     func bindMedia() {
         
-        
-//        user.mediaArray = mediaArray
-//        setUserDefaults(user: user)
-      
+      APIManager.loadMovies { (error, myMoviesArr) in
+        if let error = error {
+            print(error.localizedDescription)
+        } else if let myMoviesArr = myMoviesArr {
+            self.mediaArray = myMoviesArr
+            self.mediaTable.reloadData()
+        }
+      }
     }
     
-
     
     
     // Profile Button
     func goToProfileVC() {
     let sb = UIStoryboard(name: "Main", bundle: nil)
-    let profileVC = sb.instantiateViewController(identifier: "profileVC") as! ProfileVC
+        let profileVC = sb.instantiateViewController(identifier: VC.ProfileVC) as! ProfileVC
     self.navigationController?.pushViewController(profileVC, animated: true)
     }
 
@@ -72,11 +71,12 @@ extension MediaListVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reusabelIdentifeier, for: indexPath) as! MediaTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reusabelIdentifier, for: indexPath) as! MediaCellView
         cell.configure(media: mediaArray[indexPath.row])
         
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 235

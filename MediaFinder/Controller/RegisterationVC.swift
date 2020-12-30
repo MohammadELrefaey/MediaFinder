@@ -18,7 +18,7 @@ class RegisterationVC: UIViewController {
     @IBOutlet var genderSwitch: UISwitch!
     @IBOutlet var SignUpBtn: UIButton!
     
-    var gender: String = "Male"
+    var gender: User.Gender! = .Male
     var user: User!
 
     override func viewDidLoad() {
@@ -37,8 +37,8 @@ class RegisterationVC: UIViewController {
             let address = addressTxtField.text, address.isEmpty == false {
             
             user = User(email: email, password: password, name: name, address: address, phone: phone, gender: gender)
-            setUserDefaults(user: user)
-            
+            UserDefaulsManager.shared().set(user: user)
+    
             return true
         }
     
@@ -97,15 +97,14 @@ class RegisterationVC: UIViewController {
     func goToLoginVC() {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginVC
+        let loginVC = sb.instantiateViewController(identifier: VC.LoginVC) as! LoginVC
         self.navigationController?.pushViewController(loginVC, animated: true)
-//        self.present(loginVC, animated: true, completion: nil)
     }
     
     
     @IBAction func addressBtnPressed(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let mapVC = sb.instantiateViewController(identifier: "MapVC") as! MapVC
+        let mapVC = sb.instantiateViewController(identifier: VC.MapVC) as! MapVC
         
         mapVC.delegate = self
         
@@ -115,11 +114,8 @@ class RegisterationVC: UIViewController {
     
     @IBAction func genderSwitchTapped(_ sender: UISwitch) {
         if sender.isOn {
-            self.gender = "Female"
+            self.gender = .Female
         }
-//        else {
-//            self.gender = Male
-//        }
     }
     
     
@@ -139,12 +135,9 @@ class RegisterationVC: UIViewController {
         guard validatePhone() else {
            return showAlert(message: "Insert Valid Phone")
         }
-//        guard validateAddress() else {
-//           return showAlert(message: "Insert Valid Address")
-//        }
+
         goToLoginVC()
     }
-
 }
 
 

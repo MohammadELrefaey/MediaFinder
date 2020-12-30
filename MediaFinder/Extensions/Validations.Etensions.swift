@@ -23,7 +23,6 @@ extension String {
     
     func isValidName(Input:String) -> Bool {
         let RegEx = "^(?!\\P{L})[\\p{L}'\\s]{0,20}$"
-        //"[a-zA-Z\\s]\\w{2,24}"
         let inputPred = NSPredicate(format:"SELF MATCHES %@", RegEx)
         return inputPred.evaluate(with: self)
     }

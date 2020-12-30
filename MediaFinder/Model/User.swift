@@ -9,7 +9,7 @@
 import Foundation
 public struct User: Codable {
     
-    enum Gender : String {
+    enum Gender : String, Codable {
         case Male
         case Female
     }
@@ -19,6 +19,6 @@ public struct User: Codable {
     var name: String!
     var address: String!
     var phone: String!
-    var gender: String!
+    var gender: Gender!
     var mediaArray: [Media]!
 }

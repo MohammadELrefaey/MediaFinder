@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4591ABE402E7E782BA969E7D /* Pods_MediaFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0457BC09B360397461559BA7 /* Pods_MediaFinder.framework */; };
+		D90A7F4B259BB33A0075EDB2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90A7F4A259BB33A0075EDB2 /* APIManager.swift */; };
 		D939F0D6255D7C58006AD1A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939F0D5255D7C58006AD1A6 /* AppDelegate.swift */; };
 		D939F0DA255D7C58006AD1A6 /* RegisterationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939F0D9255D7C58006AD1A6 /* RegisterationVC.swift */; };
 		D939F0DD255D7C58006AD1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D939F0DB255D7C58006AD1A6 /* Main.storyboard */; };
@@ -17,16 +19,22 @@
 		D94BC8C22565B6A200CBA321 /* Alert.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BC8C12565B6A200CBA321 /* Alert.Extension.swift */; };
 		D94FF6702577F3C900FFBDE1 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94FF66F2577F3C900FFBDE1 /* MapVC.swift */; };
 		D956054525633C9C002672F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956054425633C9C002672F6 /* User.swift */; };
+		D95C97502594B68100F93459 /* MediaCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C974E2594B68100F93459 /* MediaCellView.swift */; };
+		D95C97512594B68100F93459 /* MediaCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95C974F2594B68100F93459 /* MediaCellView.xib */; };
+		D95C97542596294100F93459 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C97532596294100F93459 /* constants.swift */; };
 		D97888FF258DDCF500530158 /* MediaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97888FE258DDCF500530158 /* MediaListVC.swift */; };
-		D9788901258DE47600530158 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9788900258DE47600530158 /* MediaCell.swift */; };
 		D9788903258DE87800530158 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9788902258DE87800530158 /* Media.swift */; };
-		D9BF37B7258FA4730083043A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF37B6258FA4730083043A /* UserDefaults.swift */; };
+		D9BF37B7258FA4730083043A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF37B6258FA4730083043A /* UserDefaultsManager.swift */; };
 		D9C51CDB255D97780043693A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C51CDA255D97780043693A /* LoginVC.swift */; };
 		D9C51CDD255D97900043693A /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C51CDC255D97900043693A /* ProfileVC.swift */; };
-		D9C51CDF255EE9DC0043693A /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C51CDE255EE9DC0043693A /* CurrencyTextField.swift */; };
+		D9C51CDF255EE9DC0043693A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C51CDE255EE9DC0043693A /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0457BC09B360397461559BA7 /* Pods_MediaFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D72DFB286A515C5FD57AA08 /* Pods-MediaFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaFinder.release.xcconfig"; path = "Target Support Files/Pods-MediaFinder/Pods-MediaFinder.release.xcconfig"; sourceTree = "<group>"; };
+		B4CED0CB480E420835FBE7E8 /* Pods-MediaFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaFinder.debug.xcconfig"; path = "Target Support Files/Pods-MediaFinder/Pods-MediaFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		D90A7F4A259BB33A0075EDB2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D939F0D2255D7C58006AD1A6 /* MediaFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D939F0D5255D7C58006AD1A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D939F0D9255D7C58006AD1A6 /* RegisterationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationVC.swift; sourceTree = "<group>"; };
@@ -39,13 +47,15 @@
 		D94BC8C12565B6A200CBA321 /* Alert.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.Extension.swift; sourceTree = "<group>"; };
 		D94FF66F2577F3C900FFBDE1 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		D956054425633C9C002672F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D95C974E2594B68100F93459 /* MediaCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCellView.swift; sourceTree = "<group>"; };
+		D95C974F2594B68100F93459 /* MediaCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCellView.xib; sourceTree = "<group>"; };
+		D95C97532596294100F93459 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D97888FE258DDCF500530158 /* MediaListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListVC.swift; sourceTree = "<group>"; };
-		D9788900258DE47600530158 /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		D9788902258DE87800530158 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		D9BF37B6258FA4730083043A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		D9BF37B6258FA4730083043A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D9C51CDA255D97780043693A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D9C51CDC255D97900043693A /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		D9C51CDE255EE9DC0043693A /* CurrencyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		D9C51CDE255EE9DC0043693A /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,18 +63,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4591ABE402E7E782BA969E7D /* Pods_MediaFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E5852076175C75BB1986AD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0457BC09B360397461559BA7 /* Pods_MediaFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8147F8D7A7B99BB58C49DB17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4CED0CB480E420835FBE7E8 /* Pods-MediaFinder.debug.xcconfig */,
+				6D72DFB286A515C5FD57AA08 /* Pods-MediaFinder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D90A7F49259BB3250075EDB2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D90A7F4A259BB33A0075EDB2 /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D939F0C9255D7C58006AD1A6 = {
 			isa = PBXGroup;
 			children = (
 				D939F0D4255D7C58006AD1A6 /* MediaFinder */,
 				D97888FD258DDBE100530158 /* Resources */,
 				D939F0D3255D7C58006AD1A6 /* Products */,
+				8147F8D7A7B99BB58C49DB17 /* Pods */,
+				4E5852076175C75BB1986AD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +117,10 @@
 		D939F0D4255D7C58006AD1A6 /* MediaFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D90A7F49259BB3250075EDB2 /* Networking */,
 				D939F0E3255D7C5C006AD1A6 /* Info.plist */,
 				D939F0D5255D7C58006AD1A6 /* AppDelegate.swift */,
+				D95C97522596292700F93459 /* Utilities */,
 				D97888F8258D509500530158 /* Model */,
 				D97888F9258D50A100530158 /* View */,
 				D97888FA258D50A600530158 /* Controller */,
@@ -90,12 +130,20 @@
 			path = MediaFinder;
 			sourceTree = "<group>";
 		};
+		D95C97522596292700F93459 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D95C97532596294100F93459 /* constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D97888F8258D509500530158 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D956054425633C9C002672F6 /* User.swift */,
 				D9788902258DE87800530158 /* Media.swift */,
-				D9BF37B6258FA4730083043A /* UserDefaults.swift */,
+				D9BF37B6258FA4730083043A /* UserDefaultsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,9 +151,10 @@
 		D97888F9258D50A100530158 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D9C51CDE255EE9DC0043693A /* CurrencyTextField.swift */,
+				D9C51CDE255EE9DC0043693A /* CustomTextField.swift */,
 				D94137802571643D00FEC777 /* LabelBorder.swift */,
-				D9788900258DE47600530158 /* MediaCell.swift */,
+				D95C974E2594B68100F93459 /* MediaCellView.swift */,
+				D95C974F2594B68100F93459 /* MediaCellView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D939F0E6255D7C5C006AD1A6 /* Build configuration list for PBXNativeTarget "MediaFinder" */;
 			buildPhases = (
+				CE0478436E19F022E214CA8D /* [CP] Check Pods Manifest.lock */,
 				D939F0CE255D7C58006AD1A6 /* Sources */,
 				D939F0CF255D7C58006AD1A6 /* Frameworks */,
 				D939F0D0255D7C58006AD1A6 /* Resources */,
+				28CFB51CF0CB1AA57A0D1888 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D939F0E2255D7C5C006AD1A6 /* LaunchScreen.storyboard in Resources */,
+				D95C97512594B68100F93459 /* MediaCellView.xib in Resources */,
 				D939F0DF255D7C5C006AD1A6 /* Assets.xcassets in Resources */,
 				D939F0DD255D7C58006AD1A6 /* Main.storyboard in Resources */,
 			);
@@ -214,24 +266,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28CFB51CF0CB1AA57A0D1888 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaFinder/Pods-MediaFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaFinder/Pods-MediaFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MediaFinder/Pods-MediaFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE0478436E19F022E214CA8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediaFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D939F0CE255D7C58006AD1A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C51CDF255EE9DC0043693A /* CurrencyTextField.swift in Sources */,
+				D90A7F4B259BB33A0075EDB2 /* APIManager.swift in Sources */,
+				D9C51CDF255EE9DC0043693A /* CustomTextField.swift in Sources */,
 				D9C51CDD255D97900043693A /* ProfileVC.swift in Sources */,
 				D94137812571643D00FEC777 /* LabelBorder.swift in Sources */,
 				D94BC8C22565B6A200CBA321 /* Alert.Extension.swift in Sources */,
 				D94BC8BE256590B900CBA321 /* Validations.Etensions.swift in Sources */,
 				D94FF6702577F3C900FFBDE1 /* MapVC.swift in Sources */,
-				D9788901258DE47600530158 /* MediaCell.swift in Sources */,
 				D97888FF258DDCF500530158 /* MediaListVC.swift in Sources */,
 				D9788903258DE87800530158 /* Media.swift in Sources */,
 				D939F0DA255D7C58006AD1A6 /* RegisterationVC.swift in Sources */,
 				D939F0D6255D7C58006AD1A6 /* AppDelegate.swift in Sources */,
+				D95C97542596294100F93459 /* constants.swift in Sources */,
 				D956054525633C9C002672F6 /* User.swift in Sources */,
-				D9BF37B7258FA4730083043A /* UserDefaults.swift in Sources */,
+				D95C97502594B68100F93459 /* MediaCellView.swift in Sources */,
+				D9BF37B7258FA4730083043A /* UserDefaultsManager.swift in Sources */,
 				D9C51CDB255D97780043693A /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +470,7 @@
 		};
 		D939F0E7255D7C5C006AD1A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4CED0CB480E420835FBE7E8 /* Pods-MediaFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -391,6 +488,7 @@
 		};
 		D939F0E8255D7C5C006AD1A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D72DFB286A515C5FD57AA08 /* Pods-MediaFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

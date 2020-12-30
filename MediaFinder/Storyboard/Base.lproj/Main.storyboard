@@ -10,7 +10,7 @@
         <!--RegisterationVC-->
         <scene sceneID="Qor-Yv-W2a">
             <objects>
-                <viewController storyboardIdentifier="registerationVC" id="XJA-Xs-OMB" customClass="RegisterationVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterationVC" id="XJA-Xs-OMB" customClass="RegisterationVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJ0-oE-19U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
         <!--LoginVC-->
         <scene sceneID="oEf-NO-ss4">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="xZF-VV-54H" customClass="LoginVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="xZF-VV-54H" customClass="LoginVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tlf-dF-t4G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +396,7 @@
         <!--Media ListVC-->
         <scene sceneID="n9O-Qz-nEQ">
             <objects>
-                <viewController storyboardIdentifier="mediaListVC" id="lUc-Kw-U9Q" customClass="MediaListVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MediaListVC" id="lUc-Kw-U9Q" customClass="MediaListVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGB-Fq-7jR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,41 +413,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uVh-tt-OTu">
                                 <rect key="frame" x="0.0" y="162.5" width="414" height="699.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MediaTableViewCell" rowHeight="233" id="Qhc-t9-Qbg" customClass="MediaTableViewCell" customModule="MediaFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="233"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qhc-t9-Qbg" id="idJ-9O-OQp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-8z-ZAM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7x-G5-ERi">
-                                                    <rect key="frame" x="175.5" y="99.5" width="63.5" height="34.5"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="i7x-G5-ERi" firstAttribute="centerX" secondItem="idJ-9O-OQp" secondAttribute="centerX" id="8JE-G0-wzF"/>
-                                                <constraint firstItem="i7x-G5-ERi" firstAttribute="centerY" secondItem="idJ-9O-OQp" secondAttribute="centerY" id="NQ1-vn-zw7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="5bU-8z-ZAM" firstAttribute="leading" secondItem="Qhc-t9-Qbg" secondAttribute="leading" id="It2-GE-zYa"/>
-                                            <constraint firstItem="5bU-8z-ZAM" firstAttribute="top" secondItem="Qhc-t9-Qbg" secondAttribute="top" id="L2a-l7-2wC"/>
-                                            <constraint firstAttribute="trailing" secondItem="5bU-8z-ZAM" secondAttribute="trailing" id="boh-rQ-Mzd"/>
-                                            <constraint firstAttribute="bottom" secondItem="5bU-8z-ZAM" secondAttribute="bottom" id="wtN-D9-Gl0"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="mediaImageView" destination="5bU-8z-ZAM" id="XDz-12-Y7Q"/>
-                                            <outlet property="mediaNameLabel" destination="i7x-G5-ERi" id="Hl1-xC-WTA"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-62-VNJ">
                                 <rect key="frame" x="20" y="64" width="40" height="40"/>
@@ -492,7 +457,7 @@
         <!--ProfileVC-->
         <scene sceneID="MDE-E6-KBz">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="ptQ-wp-aqt" customClass="ProfileVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="ptQ-wp-aqt" customClass="ProfileVC" customModule="MediaFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MdP-5y-hqU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

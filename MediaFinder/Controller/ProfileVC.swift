@@ -21,9 +21,8 @@ class ProfileVC: UIViewController {
         // hide navigation bar
         //self.navigationController?.navigationBar.isHidden = true
 
-        self.user = getUserDefaults()
+        self.user = UserDefaulsManager.shared().get()
         printData()
-        UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
     }
     
        
@@ -32,19 +31,19 @@ class ProfileVC: UIViewController {
         nameLable.text = " " + self.user.name
         phoneLabel.text = " " + self.user.phone
         addressLabel.text = " " + self.user.address
-        genderLabel.text = " " + self.user.gender
-            }
+        genderLabel.text = " " + self.user.gender.rawValue
+        }
     
     func goToLoginVC() {
     let sb = UIStoryboard(name: "Main", bundle: nil)
-    let loginVC = sb.instantiateViewController(identifier: "loginVC") as! LoginVC
+        let loginVC = sb.instantiateViewController(identifier: VC.LoginVC) as! LoginVC
     //self.present(loginVC, animated: true, completion: nil)
     self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction func logoutBtnTapped(_ sender: UIButton) {
        goToLoginVC()
-        UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
+        UserDefaults.standard.setValue(false, forKey: UserDefaultsKeys.isLoggedIn)
     }
     
 }

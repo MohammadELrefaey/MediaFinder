@@ -8,12 +8,12 @@
 
 import Foundation
 
-//var user: User!
-//var mediaArray: [Media] = [Media]()
-
 struct Media: Codable {
-    var image: String!
-    var name: String!
+    var title: String
+    var rating: Double
+    var releaseYear: Int
+    var genre: [String]
+    var image: String
 }
 
 

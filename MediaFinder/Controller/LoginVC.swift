@@ -17,23 +17,12 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.user = getUserDefaults()
+        self.user = UserDefaulsManager.shared().get()
         
         // hide navigation bar
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    
-    
-    func getUserDefaults() -> User? {
-        if let savedUser = UserDefaults.standard.object(forKey: "User") as? Data {
-            let decoder = JSONDecoder()
-            if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
-                return loadedUser
-            }
-        }
-        return nil
-    }
     
     func isDataEntered() -> Bool {
         guard let email = emailTxtField.text, !email.isEmpty  else {
@@ -59,13 +48,13 @@ class LoginVC: UIViewController {
     
     func goToMediaListVC() {
     let sb = UIStoryboard(name: "Main", bundle: nil)
-    let mediaListVC = sb.instantiateViewController(identifier: "mediaListVC") as! MediaListVC
+        let mediaListVC = sb.instantiateViewController(identifier: VC.MediaListVC) as! MediaListVC
     self.navigationController?.pushViewController(mediaListVC, animated: true)
     }
     
     @IBAction func signUpBtnTapped(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let registerationVC = sb.instantiateViewController(identifier: "registerationVC") as! RegisterationVC
+        let registerationVC = sb.instantiateViewController(identifier: VC.RegisterationVC) as! RegisterationVC
       //  self.present(registerationVC, animated: true, completion: nil)
         self.navigationController?.pushViewController(registerationVC, animated: true)
     }
@@ -74,12 +63,13 @@ class LoginVC: UIViewController {
     @IBAction func signInBtnTapped(_ sender: UIButton) {
         if isDataEntered() {
         if isValid() {
-            goToMediaListVC()
+          goToMediaListVC()
         }
         else {
           showAlert(message: "Insert Correct Email and Password")
             }
         }
+        UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.isLoggedIn)
     }
 }
 
