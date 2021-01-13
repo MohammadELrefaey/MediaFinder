@@ -8,30 +8,30 @@
 
 import Foundation
 import Alamofire
-
 class APIManager {
-    static func loadMovies(completion: @escaping (_ error: Error?, _ movies: [Media]?) -> ()) {
+    static func loadMedia(searchQuery: String, mediaType: String, completion: @escaping (_ error: Error?, _ Media: [Media]?) -> ()) {
+        
+        let parameters = [ParamKeys.searchQuery: searchQuery, ParamKeys.mediaType: mediaType]
           
-                Alamofire.request("https://api.androidhive.info/json/movies.json", method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { response in
+        Alamofire.request(URLs.iTunesSearch, method: HTTPMethod.post, parameters: parameters, encoding: URLEncoding.default, headers: nil).response { response in
                     
-                    guard response.error == nil else {
-                        print(response.error!)
-                        completion(response.error, nil)
-                        return
-                    }
+            guard response.error == nil else {
+                print(response.error!)
+                completion(response.error, nil)
+                return
+            }
                     
-                    guard let data = response.data else {
-                        print ("didn't get any data from API")
-                        return
-                    }
+            guard let data = response.data else {
+                print ("didn't get any data from API")
+                return
+            }
                     
-                    do {
-                        let moviesArr = try JSONDecoder().decode([Media].self, from: data)
-                        completion(nil, moviesArr)
-                    } catch let error {
-                        print (error)
-                    }
+            do {
+                let mediaArr = try JSONDecoder().decode(MediaResponse.self, from: data).results
+                completion(nil, mediaArr)
+                } catch let error {
+                    print (error)
                 }
-      
-      }
+        }
+    }
 }

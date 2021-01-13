@@ -9,11 +9,11 @@
 import Foundation
 
 struct Media: Codable {
-    var title: String
-    var rating: Double
-    var releaseYear: Int
-    var genre: [String]
-    var image: String
+    var artistName: String
+    var trackName: String
+    var artworkUrl100: String
+    var longDescription: String?
+    var previewUrl: String
 }
 
 

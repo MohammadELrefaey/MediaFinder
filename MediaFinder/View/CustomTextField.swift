@@ -9,21 +9,22 @@
 import UIKit
 @IBDesignable
 
-    class CustomTextField: UITextField {
+class CustomTextField: UITextField {
 
+    override func prepareForInterfaceBuilder() {
+        customizeView()
+    }
         
-        override func prepareForInterfaceBuilder() {
-            customizeView()
-
-        }
+    override func awakeFromNib() {
+        customizeView()
+    }
+}
         
-        override func awakeFromNib() {
-           customizeView()
-        }
-        
-        func customizeView() {
+    //MARK:- Private Method
+extension CustomTextField {
+    func customizeView() {
             layer.cornerRadius = 5.0
             backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
-    }
+}
 

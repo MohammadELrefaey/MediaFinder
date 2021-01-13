@@ -9,41 +9,47 @@
 import UIKit
 
 class ProfileVC: UIViewController {
+    
+    //MARK:- Outlets
     @IBOutlet var phoneLabel: LabelBorder!
     @IBOutlet var nameLable: LabelBorder!
     @IBOutlet var addressLabel: LabelBorder!
     @IBOutlet var genderLabel: LabelBorder!
     
+    //MARK:- Properties
     var user: User!   
     
+    //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // hide navigation bar
-        //self.navigationController?.navigationBar.isHidden = true
-
-        self.user = UserDefaulsManager.shared().get()
+        
+        self.title = VCTitles.Profile
+        CustomNavigationBar()
+        self.user = SQLiteManager.shared().getUser()
         printData()
     }
     
-       
-    
-    func printData() {
+    //MARK:- Actions
+    @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        goToLoginVC()
+    }
+}
+    //MARK:- Private Methods
+extension ProfileVC {
+   private func printData() {
         nameLable.text = " " + self.user.name
         phoneLabel.text = " " + self.user.phone
         addressLabel.text = " " + self.user.address
         genderLabel.text = " " + self.user.gender.rawValue
-        }
-    
-    func goToLoginVC() {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-        let loginVC = sb.instantiateViewController(identifier: VC.LoginVC) as! LoginVC
-    //self.present(loginVC, animated: true, completion: nil)
-    self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
-    @IBAction func logoutBtnTapped(_ sender: UIButton) {
-       goToLoginVC()
-        UserDefaults.standard.setValue(false, forKey: UserDefaultsKeys.isLoggedIn)
+   private func goToLoginVC() {
+        let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let loginVC = sb.instantiateViewController(identifier: ViewContoller.LoginVC) as! LoginVC
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    private func CustomNavigationBar() {
+        self.navigationItem.setHidesBackButton(false, animated: true)
+    }
 }

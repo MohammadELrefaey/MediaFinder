@@ -9,22 +9,53 @@
 import UIKit
 
 class LoginVC: UIViewController {
+    
+    //MARK:- Outlets
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet var signInBtn: UIButton!
     
+    //MARK:- Properties
     var user: User!
-
+    
+    //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.user = UserDefaulsManager.shared().get()
         
-        // hide navigation bar
-        self.navigationController?.navigationBar.isHidden = true
+        self.title = VCTitles.Login
+        CustomNavigationBar()
+        
+        self.user = SQLiteManager.shared().getUser()
+        UserDefaults.standard.setValue(false, forKey: UserDefaultsKeys.isLoggedIn)
     }
+
+    //MARK:- Actions
+      @IBAction func signUpBtnTapped(_ sender: UIButton) {
+        let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let registerationVC = sb.instantiateViewController(identifier: ViewContoller.RegisterationVC) as! RegisterationVC
+        self.navigationController?.pushViewController(registerationVC, animated: true)
+        
+        SQLiteManager.shared().deleteUser()
+        SQLiteManager.shared().deleteLastSearch()
+        }
+        
+            
+        @IBAction func signInBtnTapped(_ sender: UIButton) {
+            if isDataEntered() {
+            if isValid() {
+              goToMediaListVC()
+            }else {
+              showAlert(message: "Insert Correct Email and Password")
+                }
+            }
+            UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.isLoggedIn)
+        }
+    }
+
+//MARK:- Priavte Methods
+extension LoginVC {
     
-    
-    func isDataEntered() -> Bool {
+       private func isDataEntered() -> Bool {
         guard let email = emailTxtField.text, !email.isEmpty  else {
             showAlert(message: "enter Email")
             return false
@@ -36,7 +67,7 @@ class LoginVC: UIViewController {
         return true
     }
     
-    func isValid() -> Bool {
+   private func isValid() -> Bool {
         if emailTxtField.text! == self.user.email, passwordTxtField.text == self.user.password {
             return true
         }
@@ -44,33 +75,17 @@ class LoginVC: UIViewController {
             return false
         }
     }
-    
-    
-    func goToMediaListVC() {
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-        let mediaListVC = sb.instantiateViewController(identifier: VC.MediaListVC) as! MediaListVC
+   private func goToMediaListVC() {
+        let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let mediaListVC = sb.instantiateViewController(identifier: ViewContoller.MediaListVC) as! MediaListVC
     self.navigationController?.pushViewController(mediaListVC, animated: true)
     }
     
-    @IBAction func signUpBtnTapped(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let registerationVC = sb.instantiateViewController(identifier: VC.RegisterationVC) as! RegisterationVC
-      //  self.present(registerationVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(registerationVC, animated: true)
-    }
-    
-        
-    @IBAction func signInBtnTapped(_ sender: UIButton) {
-        if isDataEntered() {
-        if isValid() {
-          goToMediaListVC()
-        }
-        else {
-          showAlert(message: "Insert Correct Email and Password")
-            }
-        }
-        UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.isLoggedIn)
+    private func CustomNavigationBar() {
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
     }
 }
+  
 
     

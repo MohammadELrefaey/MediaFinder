@@ -7,18 +7,17 @@
 //
 
 import Foundation
-public struct User: Codable {
-    
-    enum Gender : String, Codable {
-        case Male
-        case Female
-    }
-    
+
+enum Gender : String, Codable {
+    case Male
+    case Female
+}
+
+ struct User: Codable {
     var email: String!
     var password: String!
     var name: String!
     var address: String!
     var phone: String!
     var gender: Gender!
-    var mediaArray: [Media]!
 }
