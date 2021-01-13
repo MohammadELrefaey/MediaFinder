@@ -199,13 +199,13 @@ class SQLiteManager{
     }
     
     func deleteMediaType() {
-            print("media type deleted")
-                let users = self.mediaTypeTable
-                let deleteMediaType = users.delete()
-                do {
-                    try self.DataBase.run(deleteMediaType)
-                } catch {
-                    print(error)
-                }
-            }
+        print("media type deleted")
+        let users = self.mediaTypeTable
+        let deleteMediaType = users.delete()
+        do {
+            try self.DataBase.run(deleteMediaType)
+        } catch {
+            print(error)
+        }
+    }
 }
