@@ -27,8 +27,6 @@ class RegisterationVC: UIViewController {
     //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = VCTitles.Registeration
         CustomNavigationBar()
     }
     //MARK:- Actions
@@ -49,7 +47,6 @@ class RegisterationVC: UIViewController {
         }
     
         @IBAction func signUpBtnTapped(_ sender: UIButton) {
-            
             if validateFields() {
                 InserUserToDataBase()
                 goToLoginVC()
@@ -72,7 +69,6 @@ extension RegisterationVC {
             let name = nameTxtField.text, name.isEmpty == false,
             let phone = phoneTxtField.text, phone.isEmpty == false,
             let address = addressTxtField.text, address.isEmpty == false {
-            
             user = User(email: email, password: password, name: name, address: address, phone: phone, gender: gender)
             return true
             }
@@ -87,7 +83,7 @@ extension RegisterationVC {
             return false
         }
         guard emailTxtField.text!.isValidEmail(Input: emailTxtField.text!) else {
-            showAlert(message: "Insert Valid Email \n ex: User@mail.com")
+            showAlert(message: "Insert Valid Email \n ex: your_email@example.com")
             return false
         }
         guard passwordTxtField.text!.isValidPassword(Input: passwordTxtField.text!) else {
@@ -99,7 +95,7 @@ extension RegisterationVC {
           return false
         }
         guard phoneTxtField.text!.isValidPhone(Input: phoneTxtField.text!) else {
-            showAlert(message: "Insert Valid Phone \n at least 11 number")
+            showAlert(message: "Insert Valid Phone \n must be 11 number")
            return false
         }
         return true
@@ -113,6 +109,7 @@ extension RegisterationVC {
     }
     
     private func CustomNavigationBar() {
+        self.title = VCTitles.Registeration
         self.navigationItem.setHidesBackButton(true, animated: true)        
     }
     

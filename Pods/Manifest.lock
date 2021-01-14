@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManagerSwift (6.3.0)
+  - Player (0.13.3)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SkeletonView (1.11.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift (= 6.3.0)
+  - Player (~> 0.13.2)
+  - SDWebImage (~> 5.0)
+  - SkeletonView
+  - SQLite.swift (~> 0.12.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - Player
+    - SDWebImage
+    - SkeletonView
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  Player: e1889a481f14b3bc4065b62bed304c3de3b47dfe
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SkeletonView: cc84ce90a804dd0dd7198dd802833411c8a64eaf
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+
+PODFILE CHECKSUM: 0d7fba4336fcc9bd4a0db2c8e99d3f4475f694c6
+
+COCOAPODS: 1.10.0
