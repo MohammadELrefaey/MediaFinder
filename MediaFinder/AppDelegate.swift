@@ -19,12 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setRootVC()
         IQKeyboardManager.shared.enable = true
         audioSession()
-        
-        SQLiteManager.shared().DataBaseSetup()
-        SQLiteManager.shared().creatUserTable()
-        SQLiteManager.shared().creatSearchTable()
-        SQLiteManager.shared().creatMediaTypeTable()
-
+        DataBaseSetub()
         return true
     }
 }
@@ -55,6 +50,11 @@ extension AppDelegate {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    private func DataBaseSetub() {
+        SQLiteManager.shared().DataBaseSetup()
+        SQLiteManager.shared().creatUserTable()
+        SQLiteManager.shared().creatSearchTable()
     }
 }
     

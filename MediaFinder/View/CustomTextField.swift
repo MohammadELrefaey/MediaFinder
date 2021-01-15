@@ -22,9 +22,9 @@ class CustomTextField: UITextField {
         
     //MARK:- Private Method
 extension CustomTextField {
-    func customizeView() {
-            layer.cornerRadius = 5.0
-            backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        }
+    private func customizeView() {
+        layer.cornerRadius = 5.0
+        backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    }
 }
 

@@ -24,31 +24,26 @@ class LoginVC: UIViewController {
         
         self.title = VCTitles.Login
         CustomNavigationBar()
-        
         self.user = SQLiteManager.shared().getUser()
         UserDefaults.standard.setValue(false, forKey: UserDefaultsKeys.isLoggedIn)
     }
 
     //MARK:- Actions
-      @IBAction func signUpBtnTapped(_ sender: UIButton) {
+    @IBAction func signUpBtnTapped(_ sender: UIButton) {
         let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
         let registerationVC = sb.instantiateViewController(identifier: ViewContoller.RegisterationVC) as! RegisterationVC
         self.navigationController?.pushViewController(registerationVC, animated: true)
-        
-        SQLiteManager.shared().deleteUser()
-        SQLiteManager.shared().deleteLastSearch()
-        }
-        
+    }
             
-        @IBAction func signInBtnTapped(_ sender: UIButton) {
-            if isDataEntered() {
+    @IBAction func signInBtnTapped(_ sender: UIButton) {
+        if isDataEntered() {
             if isValid() {
-              goToMediaListVC()
-            }else {
+                goToMediaListVC()
+            } else {
               showAlert(message: "Insert Correct Email and Password")
-                }
             }
-            UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.isLoggedIn)
+        }
+        UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.isLoggedIn)
         }
     }
 
@@ -70,15 +65,14 @@ extension LoginVC {
    private func isValid() -> Bool {
         if emailTxtField.text! == self.user.email, passwordTxtField.text == self.user.password {
             return true
-        }
-        else {
+        }else {
             return false
         }
     }
    private func goToMediaListVC() {
         let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
         let mediaListVC = sb.instantiateViewController(identifier: ViewContoller.MediaListVC) as! MediaListVC
-    self.navigationController?.pushViewController(mediaListVC, animated: true)
+        self.navigationController?.pushViewController(mediaListVC, animated: true)
     }
     
     private func CustomNavigationBar() {

@@ -12,6 +12,8 @@ import Foundation
 struct UserDefaultsKeys {
     static let User = "User"
     static let isLoggedIn = "IsLoggedIn"
+    static let mediaType = "mediaType"
+    static let scStatus = "scStatus"
 }
 
 //MARK:- ViewContollers

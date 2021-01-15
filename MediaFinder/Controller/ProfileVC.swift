@@ -31,6 +31,7 @@ class ProfileVC: UIViewController {
     
     //MARK:- Actions
     @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        SQLiteManager.shared().deleteLastSearch()
         goToLoginVC()
     }
 }

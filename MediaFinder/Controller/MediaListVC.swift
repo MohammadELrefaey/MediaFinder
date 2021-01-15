@@ -26,6 +26,7 @@ class MediaListVC: UIViewController, UISearchBarDelegate {
     //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = VCTitles.MediaList
         
         SearchBar.delegate = self
@@ -77,8 +78,7 @@ extension MediaListVC: UITableViewDataSource, UITableViewDelegate{
         cell.configure(media: mediaArray[indexPath.row], mediaType: mediaType)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 
@@ -109,6 +109,9 @@ extension MediaListVC {
         //set table view delegates
         mediaTable.dataSource = self
         mediaTable.delegate = self
+        //self sizing
+        mediaTable.rowHeight = UITableView.automaticDimension
+        mediaTable.estimatedRowHeight = 600
     }
     
     @objc private func goToProfileVC() {
@@ -119,7 +122,7 @@ extension MediaListVC {
     
     private func setubNavigationBarButton() {
         let profileButton = UIBarButtonItem()
-        profileButton.title = VCTitles.Profile
+        profileButton.image = UIImage.init(systemName: "person.circle.fill")
         profileButton.target = self
         profileButton.action = #selector(goToProfileVC)
         navigationItem.rightBarButtonItem = profileButton
@@ -145,10 +148,10 @@ extension MediaListVC {
     }
     
     private func inserLastSearchIntoDataBase() {
+        UserDefaults.standard.setValue(mediaType, forKey: UserDefaultsKeys.mediaType)
+        UserDefaults.standard.setValue(scStaus, forKey: UserDefaultsKeys.scStatus)
         SQLiteManager.shared().deleteLastSearch()
         SQLiteManager.shared().insertLastSearchResult(mediaArr: self.mediaArray)
-        SQLiteManager.shared().deleteMediaType()
-        SQLiteManager.shared().insertMediaType(mediaType: mediaType, scStatus: scStaus)
     }
     
     private func getLastSearchFromDataBase() {
@@ -156,19 +159,16 @@ extension MediaListVC {
             self.mediaArray = mediaArr
         }
 
-        if let mediaType = SQLiteManager.shared().getMediaType() {
+        if let mediaType = UserDefaults.standard.string(forKey: UserDefaultsKeys.mediaType) {
             self.mediaType = mediaType
         }
         
-        if let scStaus = SQLiteManager.shared().getScStatus() {
-            self.scStaus = scStaus
-        }
+        self.scStaus = UserDefaults.standard.integer(forKey: UserDefaultsKeys.scStatus)
     }
     
     private func hideTable() {
         if mediaArray.count == 0 {
             noDataImg.isHidden = false
-            print("ay haga")
         } else {
             noDataImg.isHidden = true
         }

@@ -29,29 +29,29 @@ class RegisterationVC: UIViewController {
         super.viewDidLoad()
         CustomNavigationBar()
     }
-    //MARK:- Actions
-        @IBAction func addressBtnPressed(_ sender: UIButton) {
-            let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
-            let mapVC = sb.instantiateViewController(identifier: ViewContoller.MapVC) as! MapVC
-            
-            mapVC.delegate = self
-            
-            self.present(mapVC, animated: true, completion: nil)
-        }
-        
-        
-        @IBAction func genderSwitchTapped(_ sender: UISwitch) {
-            if sender.isOn {
-                self.gender = .Female
-            }
-        }
     
-        @IBAction func signUpBtnTapped(_ sender: UIButton) {
-            if validateFields() {
-                InserUserToDataBase()
-                goToLoginVC()
-            }
+    //MARK:- Actions
+    @IBAction func addressBtnPressed(_ sender: UIButton) {
+        let sb = UIStoryboard(name: Storyboard.main, bundle: nil)
+        let mapVC = sb.instantiateViewController(identifier: ViewContoller.MapVC) as! MapVC
+            
+        mapVC.delegate = self
+            
+        self.present(mapVC, animated: true, completion: nil)
+    }
+        
+    @IBAction func genderSwitchTapped(_ sender: UISwitch) {
+        if sender.isOn {
+            self.gender = .Female
         }
+    }
+    
+    @IBAction func signUpBtnTapped(_ sender: UIButton) {
+        if validateFields() {
+            InserUserToDataBase()
+            goToLoginVC()
+        }
+    }
 }
 
 //MARK:- SendingDataProtocol
@@ -72,8 +72,7 @@ extension RegisterationVC {
             user = User(email: email, password: password, name: name, address: address, phone: phone, gender: gender)
             return true
             }
-                
-           return false
+            return false
     }
    
     // Validations

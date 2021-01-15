@@ -16,7 +16,7 @@ class MediaCellView: UITableViewCell {
     @IBOutlet weak var firstLbl: UILabel!
     @IBOutlet weak var secondLbl: UILabel!
     @IBOutlet weak var thirdLbl: UILabel!
-    @IBOutlet weak var fourthLbl: UITextView!
+    @IBOutlet weak var fourthLbl: UILabel!
     
     //MARK:- Lifecycle Methods
     override func awakeFromNib() {
@@ -37,7 +37,7 @@ extension MediaCellView {
     // configure media cell
     func configure(media: Media, mediaType: String) {
         applyingSkeleton()
-    
+        imgCornerRadius()
         mediaImageView.sd_setImage(with: URL(string: media.artworkUrl100), placeholderImage: UIImage(named: "media.png"))
         
         if mediaType == MediaType.music {
@@ -76,5 +76,8 @@ extension MediaCellView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute:{
             self.hideSkeleton()
         })
+    }
+    private func imgCornerRadius() {
+        mediaImageView.layer.cornerRadius = mediaImageView.frame.size.width / 5
     }
 }
